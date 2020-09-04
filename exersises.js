@@ -42,8 +42,24 @@ function isVowel(char){
   // ---------------------
   // Write a function rovarspraket() that will translate a text into "rövarspråket". That is, double every consonant and place an occurrence of "o" in between. For example, translate("this is fun") should return the string "tothohisos isos fofunon".
   // ---------------------
-function rovarspraket(text){
-  let translation = '';
+
+
+    var translate = function(text) {
+    var string = text.toLowerCase();
+    var vowels = ["a", "e", "i", "o", "u", " "];
+    var y = "";
+    for (i = 0; i < string.length; i++) {
+       var current = string.charAt(i);
+      if (vowels.indexOf(current) != -1) {
+          y = (y + (current));
+      } else {
+          y = (y + (current + "o" + current));
+      }
+    }
+    return y;
+  }
+
+  console.log(translate("rovarspraket"));
 
   //text.split("").forEach(function(char))
 
@@ -53,7 +69,11 @@ const textArray = text.split("");
   // ---------------------
   // Define a function sum() and a function multiply() that sums and multiplies (respectively) all the numbers in an array of numbers. For example, sum([1,2,3,4]) should return 10, and multiply([1,2,3,4]) should return 24.
   // ---------------------
-function sum(arr){
+
+
+
+function sum
+
   let result=0;
   for(let i = 0; i < arr.length; i++){
   result == arr[i];
@@ -61,7 +81,7 @@ function sum(arr){
   return result;
 }
 function multiply(arr){
-  let result = 0;
+  let result = 1;
 
   for(let i = 0; i < arr.length; i++){
     result += arr[i];
