@@ -30,12 +30,13 @@
 function doSomethingCool() {
   console.log("Something Cool!");
 }
-const doSomethingCool = function() {
-  console.log('Something Cool');
-}
+
 // Put your answer below -------------------------
+var doSomethingCool = function() {
+  console.log('Something Cool');
 
 
+}
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -55,7 +56,9 @@ function sayHi() {
 
 // Put your answer below -------------------------
 
-
+  // setTimeout(function (){
+  //   alert("Hello, World");
+  // },2000);
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -85,7 +88,7 @@ console.log("The letter is", letter);
 
 // Put your answer below -------------------------
 
-
+//its C because the setTimeOut doesn't fire immediately because of the mill. sec delay
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -106,8 +109,9 @@ var reverseStr = function(str) {
 };
 
 // Put your answer below -------------------------
-
-
+var reverseStr = function(str) {
+  return str.split("").reverse().join("");
+}
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -141,7 +145,16 @@ var spanishColor = function(colorName) {
 
 // Put your answer below -------------------------
 
-
+const colors = {
+  rojo: '#ff0000',
+  blanco: '#ffffff',
+  azul: '#0000ff',
+  verde: '#00ff00',
+  negro: '#000000',
+}
+var spanishColor = function(colorName) {
+  return colors[colorName];
+}
 // -----------------------------------------------
 
 //////////////////////////////////////////////////
@@ -157,7 +170,8 @@ var spanishColor = function(colorName) {
 var foo = "bar";
 
 // Put your answer below -------------------------
-
+var foo;
+foo = 'bar';
 
 // -----------------------------------------------
 
@@ -180,6 +194,11 @@ var callTenTimes = function(callback) {
 
 // Put your answer below -------------------------
 
+var callNTimes = function(callback, number) {
+  var range = Array.from(Array(number).keys());
+  range.forEach(callback);
+};
+callNTime(functionName, 20);
 
 // -----------------------------------------------
 
@@ -207,7 +226,14 @@ var decreaseScore = function() {
 };
 
 // Put your answer below -------------------------
-
+(function() {
+  var score = 0;
+  var increaseScore = function() {
+    score++;
+  };
+  var decreaseScore = function() {
+    score--;
+  };
 
 // -----------------------------------------------
 
@@ -228,6 +254,10 @@ var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
 
+var addNumbers = function(numberA, numberB) {
+  return numberA + numberB;
+};
+var twoPlusTwo = addNumbers(2,2);
 
 // -----------------------------------------------
 
@@ -253,7 +283,21 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
+//my guess for why this is going to Nan(not a number) is because the speed is = to 0 and the amount
+//is not defined.  So when it fires nothing can be added because there is not an amount.
 
+
+var speed = 0;
+
+var accelerate = function(amount){
+  speed = speed + amount;
+
+    if(amount) {
+      speed += amount;
+    } else {
+      speed +=1;
+    }
+};
 
 // -----------------------------------------------
 
