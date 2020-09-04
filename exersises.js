@@ -61,7 +61,7 @@ function sum(arr){
   return result;
 }
 function multiply(arr){
-  let result = 1;
+  let result = 0;
 
   for(let i = 0; i < arr.length; i++){
     result += arr[i];
@@ -73,7 +73,10 @@ function multiply(arr){
   // Define a function reverse() that computes the reversal of a string. For example, reverse("jag testar") should return the string "ratset gaj".
   // ---------------------
 
-function reverse(str){}
+function reverse(str){
+  return str.split("").reverse().join("");
+}
+reverse("jag testar");
 
   // ---------------------
   // Define a function findLongestWord() that takes an array of words and returns the length of the longest one.
